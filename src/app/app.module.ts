@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TasksListComponent } from './components/tasks-list/tasks-list.component';
 import { TaskFormComponent } from './components/task-form/task-form.component';
+import { TaskEntityComponent } from './components/task-entity/task-entity.component';
+
 
 @NgModule({
   declarations: [
@@ -13,10 +17,12 @@ import { TaskFormComponent } from './components/task-form/task-form.component';
     HeaderComponent,
     FooterComponent,
     TasksListComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    TaskEntityComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,26 +1,36 @@
+.form{
+    float:left;
+}
 .form_into{
     padding:30px;
-    background-color: darkblue;
+    background-color:navy ;
     text-align:center;
-    margin-left:150px;
-    margin-right: 150px;
+    font-size: large;
+    // margin-left:150px;
+    // margin-right: 150px;
     margin-top:119px;
+    // float:left;
+}
+p{
+    color: aqua;
 }
 .form_outro{
     padding:30px;
-    background-color: darkblue;
+    background-color: navy;
     text-align:center;
-    margin-left:150px;
-    margin-right: 150px;
+    // margin-left:150px;
+    // margin-right: 150px;
     margin-bottom: 100px;
+    // float:left;
 }
 .form_class{
+    // float:left;
     padding:30px;
-    background-color: lightblue;
+    background-color:  lightgray;
     text-align:center;
     // width: 600px;
-    margin-left:150px;
-    margin-right: 150px;
+    // margin-left:150px;
+    // margin-right: 150px;
     height:430px;
     // margin-top:60px;
     // margin-bottom: 200px;
