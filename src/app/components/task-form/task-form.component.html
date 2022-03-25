@@ -1,1 +1,44 @@
-<p>task-form works!</p>
+<div class="form_into">Goooooooooo!</div>
+<div class="form_class">
+    <form>
+        <div class=line>
+        <label for="text">Label:</label><input type="text" name="label"  id="t_label" placeholder="enter your task label">
+        </div>
+        <!-- {{label}} -->
+        <div class=line>
+        <label for="date">Starting date:</label><input type="date" name="sdate"  id="t_sdate" placeholder="Pick a starting date">
+        </div>
+        <!-- {{sdate}} -->
+        <div class=line>
+        <label for="date">Deadline:</label><input type="date" name="deadline"  id="t_deadline" placeholder="Pick a deadline">
+        </div>
+        <!-- {{deadline}} -->
+        <div class=line>
+        <label for="text">Priority:</label>
+            <select name="priority">
+                <option value=""></option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+        </select>
+        </div>
+        <!-- {{priority}} -->
+        <div class=line>
+        <label for="text">Status:</label>
+            <select name="status">
+                <option value=""></option>
+                <option value="Done">Done</option>
+                <option value="Currently working on">Currently working on</option>
+                <option value="Not planified yet">Not planified yet</option>
+        </select>
+        </div>
+        <!-- {{status}} -->
+        <div class=line>
+        <label for="text">Details</label><textarea name="details" id="t_details"></textarea>
+        </div>
+        <!-- {{details}} -->
+        <input type="submit" name="save" value="Add!"/>
+        <input type="submit" name="cancel" value="Cancel"/>        
+        </form>
+</div>
+<div class="form_outro">Goooooooooo!</div>
