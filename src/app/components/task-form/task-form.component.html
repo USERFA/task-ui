@@ -1,22 +1,23 @@
 <div class="form">
 <div class="form_into"><p>Today's new goal!</p></div>
 <div class="form_class">
+    <!-- <form (ngSubmit)="submitData()"> -->
     <form>
         <div class=line>
-        <label for="text">Label:</label><input type="text" name="label"  id="t_label" placeholder="enter your task label">
+        <label for="text">Label:</label><input type="text" name="label" [(ngModel)]="label"  id="t_label" placeholder="enter your task label">
         </div>
         <!-- {{label}} -->
         <div class=line>
-        <label for="date">Starting date:</label><input type="date" name="sdate"  id="t_sdate" placeholder="Pick a starting date">
+        <label for="date">Starting date:</label><input type="date" name="sdate" [(ngModel)]="sdate" id="t_sdate" placeholder="Pick a starting date">
         </div>
         <!-- {{sdate}} -->
         <div class=line>
-        <label for="date">Deadline:</label><input type="date" name="deadline"  id="t_deadline" placeholder="Pick a deadline">
+        <label for="date">Deadline:</label><input type="date" name="deadline" [(ngModel)]="deadline"  id="t_deadline" placeholder="Pick a deadline">
         </div>
         <!-- {{deadline}} -->
         <div class=line>
         <label for="text">Priority:</label>
-            <select name="priority">
+            <select name="priority" [(ngModel)]="priority">
                 <option value=""></option>
                 <option value="High">High</option>
                 <option value="Medium">Medium</option>
@@ -26,7 +27,7 @@
         <!-- {{priority}} -->
         <div class=line>
         <label for="text">Status:</label>
-            <select name="status">
+            <select name="status" [(ngModel)]="status">
                 <option value=""></option>
                 <option value="Done">Done</option>
                 <option value="Currently working on">Currently working on</option>
@@ -35,11 +36,11 @@
         </div>
         <!-- {{status}} -->
         <div class=line>
-        <label for="text">Details</label><textarea name="details" id="t_details"></textarea>
+        <label for="text">Details</label><textarea name="details" [(ngModel)]="details" id="t_details"></textarea>
         </div>
         <!-- {{details}} -->
-        <input type="submit" name="save" value="Add!"/>
-        <input type="submit" name="cancel" value="Cancel"/>        
+        <input type="submit" name="save" value="Add!" (click)="submitData()"/>
+        <input type="submit" name="cancel" value="Cancel" (click)="cancel()"/>        
         </form>
 </div>
 <div class="form_outro"></div>

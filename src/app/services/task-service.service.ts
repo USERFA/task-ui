@@ -28,7 +28,8 @@ export class TaskServiceService {
   }
 
   //add a new task using create api
-  createTask(): void {
+  createTask(t:Task4D): Observable<Task4D> {
+    return this.apicall.post<Task4D>('http://localhost:80/Rest/Task/create', t);
 
   }
 

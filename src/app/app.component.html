@@ -1,4 +1,4 @@
 <app-header></app-header>
-<app-task-form></app-task-form>
-<app-tasks-list></app-tasks-list>
+<app-task-form (formtask)="addTask($event)"></app-task-form>
+<app-tasks-list (out)="getList($event)"></app-tasks-list>
 <app-footer></app-footer>
