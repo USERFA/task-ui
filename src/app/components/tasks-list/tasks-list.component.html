@@ -1,5 +1,5 @@
 <div class="tasks_list">
-<!-- <app-task-entity  *ngFor="let t of Tasks_kulhum" [task]="t"> -->
+<app-task-entity  *ngFor="let t of Tasks_kulhum" [task]="t">
     <table>
         <tr>
             <th>Label</th>
@@ -8,15 +8,17 @@
             <th>Deadline</th>
             <th>Status</th>
             <th>Priority</th>
+            <th>Actions</th>
         </tr>
-        <!-- <tr>
+        <tr>
             <td>{{t.label}}</td>
             <td>{{t.details}}</td>
             <td>{{t.startingDate}}</td>
             <td>{{t.deadline}}</td>
             <td>{{t.status}}</td>
             <td>{{t.priority}}</td>
-        </tr> -->
+            <td><button><i class="fa fa-edit"></i></button> <button><i class='fa fa-trash-o'></i></button></td>
+        </tr>
     </table>
-<!-- </app-task-entity> -->
+</app-task-entity>
 </div>

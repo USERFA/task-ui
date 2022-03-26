@@ -21,10 +21,11 @@ export class AppComponent {
     }
   }
   //add
-  addTask(t: Task4D) {
-    console.log(t);
-    this.taskservice.createTask(t).subscribe((task) => this.tasks.push(task));
-  }
+  addTask(taskI: Task4D) {
+    console.log(taskI);
+    this.taskservice.createTask(taskI).subscribe((taskI) => this.tasks.push(taskI));
+    alert("A new task is added to the list");
+    }
 
 
 }
