@@ -19,7 +19,8 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutPageComponent
-  }
+  },
+  
 ];
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule,
+    [RouterModule.forRoot(appRoutes)],
     FontAwesomeModule
 
   ],

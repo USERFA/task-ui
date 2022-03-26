@@ -1,24 +1,30 @@
 <div class="tasks_list">
-<app-task-entity  *ngFor="let t of Tasks_kulhum" [task]="t">
-    <table>
-        <tr>
-            <th>Label</th>
-            <th>Details</th>
-            <th>Starting date</th>
-            <th>Deadline</th>
-            <th>Status</th>
-            <th>Priority</th>
-            <th>Actions</th>
-        </tr>
-        <tr>
-            <td>{{t.label}}</td>
+    <!-- <app-task-entity *ngFor="let t of Tasks_kulhum" [task]="t"> -->
+        <table>
+            <tr>
+                <th>Label</th>
+                <th>Details</th>
+                <th>Starting date</th>
+                <th>Deadline</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <!-- <td>{{t.label}}</td>
             <td>{{t.details}}</td>
             <td>{{t.startingDate}}</td>
             <td>{{t.deadline}}</td>
             <td>{{t.status}}</td>
-            <td>{{t.priority}}</td>
-            <td><button><i class="fa fa-edit"></i></button> <button><i class='fa fa-trash-o'></i></button></td>
-        </tr>
-    </table>
-</app-task-entity>
+            <td>{{t.priority}}</td> -->
+                <td>Task1</td>
+                <td>whaaaaaaat</td>
+                <td>2022-4-21</td>
+                <td>2022-4-22</td>
+                <td>Currently working on</td>
+                <td>High</td>
+                <td><button (click)="update()"><i class="fa fa-edit"></i></button> <button (click)="remove()"><i class='fa fa-trash-o'></i></button></td>
+            </tr>
+        </table>
+    <!-- </app-task-entity> -->
 </div>

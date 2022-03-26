@@ -8,6 +8,7 @@ import { Task4D } from '../models/Task4D.model';
 })
 export class TaskServiceService {
   private t: Task4D[] = [];
+  id_task: number = 0;
 
   constructor(private apicall: HttpClient) { }
   private URL = 'http://localhost:80/Rest/Task'
@@ -18,17 +19,22 @@ export class TaskServiceService {
   }
 
   //removing a task using delete api
-  removeTask(): void {
-
+  removeTask(t:Task4D): void {
+    const url = `http://localhost:80/Rest/Task('${t.id})/remove_by_ID`;
+    this.apicall.delete(url);
+    alert("Task deleted!");
   }
 
   //modify a task using update api
-  updateTask(): void {
-
+  updateTask(t:Task4D): Observable<Task4D>{
+    const url = `http://localhost:80/Rest/Task('${t.id})/update_by_ID`;
+    alert("Your task was modified!");
+    return this.apicall.put<Task4D>(url, t);
   }
 
   //add a new task using create api
   createTask(t:Task4D): Observable<Task4D> {
+    alert("Your task was created successfully!");
     return this.apicall.post<Task4D>('http://localhost:80/Rest/Task/create', t);
 
   }

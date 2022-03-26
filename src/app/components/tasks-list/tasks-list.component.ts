@@ -18,8 +18,15 @@ export class TasksListComponent implements OnInit {
   }
 
   getTasks():void{
-     this.taskservice.getTasks().subscribe( (tt: any[]) => { console.log(tt) ;this.Tasks_kulhum=Object.entries(tt)});
+     this.taskservice.getTasks().subscribe( (tt: any[]) => { console.log(tt) ;this.Tasks_kulhum=tt;console.log(this.Tasks_kulhum)});
      this.out.emit(this.Tasks_kulhum);
+  }
+
+  update():void{
+    alert("modify");
+  }
+  remove():void{
+    alert("delete");
   }
 
 }
