@@ -23,9 +23,13 @@ export class TasksListComponent implements OnInit {
   }
 
   update():void{
+    // this.task=t;
+    // this.taskservice.updateTask(task);
     alert("modify");
   }
   remove():void{
+      // this.task=t;
+    // this.taskservice.removeTask(task);
     alert("delete");
   }
 
