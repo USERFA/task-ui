@@ -10,7 +10,7 @@ import { TaskServiceService } from 'src/app/services/task-service.service';
 export class TasksListComponent implements OnInit {
   @Output() out:EventEmitter<Task4D[]>=new EventEmitter();//to send the value of the list to the parent it'll push the new object in it
   Tasks_kulhum!:any[];
-  // task!: Task4D;
+  task!: Task4D;
 
   constructor(private taskservice:TaskServiceService) { }
   ngOnInit(): void {
@@ -18,7 +18,7 @@ export class TasksListComponent implements OnInit {
   }
 
   getTasks():void{
-     this.taskservice.getTasks().subscribe( (tt: any[]) => { console.log(tt) ;this.Tasks_kulhum=tt;console.log(this.Tasks_kulhum)});
+     this.taskservice.getTasks().subscribe( (tt:any[]) => {this.Tasks_kulhum=Object.values(tt);console.log(this.Tasks_kulhum[0])});
      this.out.emit(this.Tasks_kulhum);
   }
 
